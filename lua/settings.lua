@@ -19,5 +19,15 @@ set.tabstop = 2
 set.updatetime = 300
 set.shortmess:append {c = true}
 set.signcolumn = 'yes'
+set.background ='dark'
+set.termguicolors = true
 
 g.mapleader = ' '
+g.UltiSnipsEditSplit = 'vertical'
+g.UltiSnipsSnippetsDir = '~/.config/nvim/UltiSnips'
+
+-- remove whiteSpaces from line
+cmd [[ autocmd BufRead,BufWrite * if ! &bin | silent! %s/ \+$//ge | endif ]]
+
+-- change to gruvbox theme
+cmd [[ colorscheme gruvbox]]

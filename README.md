@@ -1,3 +1,8 @@
+#### First of all configs, you need to install neovim
+```
+brew install neovim
+```
+
 ### Install vim Plug
 ```
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
