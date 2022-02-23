@@ -181,6 +181,10 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+  i = {
+    name = "Formatting",
+    j = { "<cmd>%!jq .<cr>", "Pretty json" }
+  }
 }
 
 which_key.setup(setup)
