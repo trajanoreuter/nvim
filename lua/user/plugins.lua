@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "christoomey/vim-tmux-navigator"
   use "tpope/vim-surround"
+  use "hashivim/vim-terraform"
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "morhetz/gruvbox"
