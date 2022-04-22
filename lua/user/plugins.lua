@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use "folke/which-key.nvim"
   use "christoomey/vim-tmux-navigator"
   use "tpope/vim-surround"
+  use "hashivim/vim-terraform"
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "morhetz/gruvbox"
@@ -81,6 +82,9 @@ return packer.startup(function(use)
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+  -- Golang
+  use "fatih/vim-go"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
