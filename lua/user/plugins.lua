@@ -46,11 +46,27 @@ return packer.startup(function(use)
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
   use "kyazdani42/nvim-web-devicons"
-  use "kyazdani42/nvim-tree.lua"
-  use "akinsho/bufferline.nvim"
+  use "simrat39/symbols-outline.nvim"
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons',
+    },
+    tag = 'nightly',
+  }
+
+  use {
+    'akinsho/bufferline.nvim',
+    branch = 'main',
+  }
+
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
-  use "akinsho/toggleterm.nvim"
+  use {
+    'akinsho/toggleterm.nvim',
+    branch = 'main',
+  }
+
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
   use "lukas-reineke/indent-blankline.nvim"
@@ -60,10 +76,13 @@ return packer.startup(function(use)
   use "christoomey/vim-tmux-navigator"
   use "tpope/vim-surround"
   use "hashivim/vim-terraform"
+  use {
+    'phaazon/hop.nvim',
+    branch = 'v2',
+  }
   -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "morhetz/gruvbox"
-  use "arcticicestudio/nord-vim"
   use "luisiacc/gruvbox-baby"
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -95,6 +114,7 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+
   use "JoosepAlviste/nvim-ts-context-commentstring"
 
   -- Git
