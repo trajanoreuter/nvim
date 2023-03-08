@@ -51,7 +51,7 @@ M.setup_lsp = function(_, capabilities)
 
          local tsserver = {
             on_attach = function(client, bufnr)
-               client.resolved_capabilities.document_formatting = false
+               client.server_capabilities.document_formatting = false
                vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>fm", "<cmd>lua vim.lsp.buf.formatting()<CR>", {})
             end,
             capabilities = capabilities,
