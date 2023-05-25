@@ -53,7 +53,7 @@ cmp.setup {
   },
   -- enabled or disabled if using copilot
   completion = {
-    autocomplete = true,
+    autocomplete = false,
   },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
