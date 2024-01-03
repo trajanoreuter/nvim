@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
 				ts_update()
 			end,}
   use("RRethy/vim-illuminate")
+  use("fatih/vim-go")
   use("vim-airline/vim-airline")
   use("tpope/vim-surround")
   use("nvim-treesitter/playground")
