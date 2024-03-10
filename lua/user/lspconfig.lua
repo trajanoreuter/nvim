@@ -104,6 +104,7 @@ function M.config()
     "tailwindcss",
     "eslint",
     "rust_analyzer",
+    "gopls",
     -- "prismals",
   }
 
