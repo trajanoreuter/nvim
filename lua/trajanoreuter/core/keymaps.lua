@@ -39,3 +39,7 @@ keymap.set({ "n", "i", "s" }, "<c-b>", function()
     return "<c-b>"
   end
 end, { silent = true, expr = true })
+
+-- Enable visual mode to preserve selection after indenting
+keymap.set("v", "<", "<gv", { noremap = true, silent = true })
+keymap.set("v", ">", ">gv", { noremap = true, silent = true })
