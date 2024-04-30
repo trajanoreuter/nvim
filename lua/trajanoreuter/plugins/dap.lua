@@ -27,13 +27,11 @@ return {
       dapui.close()
     end
 
-    local keymap = vim.keymap -- for conciseness
-
-    -- keymap to toogle dap breakpoints
-    keymap.set("n", "<leader>dt", dap.toggle_breakpoint, { desc = "DAP Breakpoint Toggle" })
-    -- keymap to dap continue
-    keymap.set("n", "<leader>dc", dap.continue, { desc = "DAP Continue" })
-    -- keymap to toogle dap ui
-    keymap.set("n", "<leader>du", dapui.toggle, { desc = "DAP UI Toggle" })
+    local wk = require("which-key")
+    wk.register({
+      ["<leader>dt"] = { dap.toggle_breakpoint, "DAP Breakpoint Toggle" },
+      ["<leader>dc"] = { dap.continue, "DAP Continue" },
+      ["<leader>du"] = { dapui.toggle, "DAP UI Toggle" },
+    })
   end,
 }
