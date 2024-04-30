@@ -1,5 +1,24 @@
 return {
   {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- required
+      "sindrets/diffview.nvim", -- optional - Diff integration
+      -- Only one of these is needed, not both.
+      "ibhagwan/fzf-lua", -- optional
+    },
+    config = function()
+      local neogit = require("neogit")
+      neogit.setup({})
+
+      local wk = require("which-key")
+
+      wk.register({
+        ["<leader>gn"] = { "<cmd>Neogit kind=vsplit<CR>", "Neogit" },
+      })
+    end,
+  },
+  {
     "kdheepak/lazygit.nvim",
     cmd = {
       "LazyGit",
@@ -27,13 +46,7 @@ return {
       local icons = require("trajanoreuter.icons")
       local wk = require("which-key")
       wk.register({
-        ["<leader>gj"] = { "<cmd>lua require 'gitsigns'.next_hunk({navigation_message = false})<cr>", "Next Hunk" },
-        ["<leader>gk"] = { "<cmd>lua require 'gitsigns'.prev_hunk({navigation_message = false})<cr>", "Prev Hunk" },
-        ["<leader>gp"] = { "<cmd>lua require 'gitsigns'.preview_hunk()<cr>", "Preview Hunk" },
-        ["<leader>gr"] = { "<cmd>lua require 'gitsigns'.reset_hunk()<cr>", "Reset Hunk" },
         ["<leader>gb"] = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
-        ["<leader>gR"] = { "<cmd>lua require 'gitsigns'.reset_buffer()<cr>", "Reset Buffer" },
-        ["<leader>gs"] = { "<cmd>lua require 'gitsigns'.stage_hunk()<cr>", "Stage Hunk" },
         ["<leader>gu"] = {
           "<cmd>lua require 'gitsigns'.undo_stage_hunk()<cr>",
           "Undo Stage Hunk",
