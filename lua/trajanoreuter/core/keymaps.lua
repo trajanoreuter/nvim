@@ -6,9 +6,9 @@ local keymap = vim.keymap -- for conciseness
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-keymap.set("n", "<leader>w", "<cmd>w!<CR>", { desc = "Save file" })
-keymap.set("n", "<leader>qw", "<cmd>wqa!<CR>", { desc = "Save and close all" })
-keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Close buffer" })
+keymap.set("n", "<leader>w!", "<cmd>w!<CR>", { desc = "Save file" })
+keymap.set("n", "<leader>qw!", "<cmd>wqa!<CR>", { desc = "Save and close all" })
+keymap.set("n", "<leader>q!", "<cmd>q<CR>", { desc = "Close buffer" })
 
 -- Increment and decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number under cursor" })
